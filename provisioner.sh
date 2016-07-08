@@ -62,6 +62,6 @@ cat << EOF > /etc/apache2/sites-enabled/$DOMAIN.conf
 EOF
 
 cd /home/wekan
-sudo -u wekan docker-composer up -d
+sudo -u wekan docker-compose up -d
 
 apache2ctl restart
