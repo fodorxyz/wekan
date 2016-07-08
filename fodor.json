@@ -4,6 +4,7 @@
   "installpath": "/tmp/wekan",
   "provisioner": "provisioner.sh",
   "text": {
+    "complete": "Now you just need to register your account and get going!"
   },
   "links": [
     {
