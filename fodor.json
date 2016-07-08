@@ -1,0 +1,24 @@
+{
+
+  "name": "fodorxyz/wekan",
+  "installpath": "/tmp/wekan",
+  "provisioner": "provisioner.sh",
+  "text": {
+  },
+  "links": [
+    {
+      "title": "Wekan",
+      "url": "http://{{DOMAIN}}"
+    }
+  ],
+  "size": {
+    "suggested": "512mb",
+    "required": "512mb"
+  },
+  "distro": "docker",
+  "description": "The open-source Trello-like kanban (build with Meteor) https://wekan.io",
+  "keywords": ["fodor", "trello", "productivity", "kanban"],
+  "homepage": "https://wekan.io/",
+  "inputs": [
+  ]
+}
