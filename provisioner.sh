@@ -4,6 +4,7 @@ chmod +x /usr/local/bin/docker-compose
 useradd -d /home/wekan -m -s /bin/bash wekan
 usermod -aG docker wekan
 
+apt-get -y update
 apt-get -y install apache2 libapache2-mod-proxy-html libxml2-dev
 
 a2enmod proxy proxy_http proxy_wstunnel
