@@ -20,6 +20,7 @@
   "description": "The open-source Trello-like kanban (build with Meteor) https://wekan.io",
   "keywords": ["fodor", "trello", "productivity", "kanban"],
   "homepage": "https://wekan.io/",
+  "image": "https://wekan.io/static/screenshot.jpeg",
   "inputs": [
   ]
 }
