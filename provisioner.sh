@@ -62,6 +62,7 @@ cat << EOF > /etc/apache2/sites-enabled/$DOMAIN.conf
 </VirtualHost>
 EOF
 
+cd /home/wekan
 sudo -u wekan -HEn docker-compose up -d
 
 apache2ctl restart
