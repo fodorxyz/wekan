@@ -60,10 +60,10 @@ cat << EOF > /etc/apache2/sites-enabled/$DOMAIN.conf
 </VirtualHost>
 EOF
 
-
-sudo -u wekan docker-compose rm -f
-sudo -u wekan docker-compose pull
-sudo -u wekan docker-compose build
-sudo -u wekan docker-compose up -d
+cd /home/wekan
+sudo -u wekan -HEn docker-compose rm -f
+sudo -u wekan -HEn docker-compose pull
+sudo -u wekan -HEn docker-compose build
+sudo -u wekan -HEn docker-compose up -d
 
 apache2ctl restart
