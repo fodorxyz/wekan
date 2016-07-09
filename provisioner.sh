@@ -1,4 +1,6 @@
 set -x
+set +e
+
 curl -L https://github.com/docker/compose/releases/download/1.8.0-rc2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
@@ -60,10 +62,6 @@ cat << EOF > /etc/apache2/sites-enabled/$DOMAIN.conf
 </VirtualHost>
 EOF
 
-cd /home/wekan
-sudo -u wekan -HEn docker-compose rm -f
-sudo -u wekan -HEn docker-compose pull
-sudo -u wekan -HEn docker-compose build
 sudo -u wekan -HEn docker-compose up -d
 
 apache2ctl restart
