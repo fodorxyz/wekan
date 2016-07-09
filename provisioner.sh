@@ -63,6 +63,6 @@ cat << EOF > /etc/apache2/sites-enabled/$DOMAIN.conf
 EOF
 
 cd /home/wekan
-sudo -s -u wekan -HEn docker-compose -f /home/wekan/docker-compose.yml up -d
+sudo -i -u wekan -HEn docker-compose -f /home/wekan/docker-compose.yml up -d
 
 apache2ctl restart
