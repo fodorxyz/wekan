@@ -12,7 +12,9 @@ apt-get -y install apache2 libapache2-mod-proxy-html libxml2-dev
 
 a2enmod proxy proxy_http proxy_wstunnel
 
-cat << EOF > /home/wekan/docker-compose.yml
+mkdir /tmp/wekan-docker
+
+cat << EOF > /tmp/wekan-docker/docker-compose.yml
 wekan:
   image: mquandalle/wekan
   restart: always
@@ -63,6 +65,6 @@ cat << EOF > /etc/apache2/sites-enabled/$DOMAIN.conf
 EOF
 
 cd /home/wekan
-sudo -i -u wekan -HEn docker-compose -f /home/wekan/docker-compose.yml up -d
+sudo -i -u wekan -HEn docker-compose -f /tmp/wekan-docker/docker-compose.yml up -d
 
 apache2ctl restart
